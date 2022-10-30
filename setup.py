@@ -6,7 +6,7 @@ setuptools.setup(
     author="David Zhang",
     author_email="dyzhang32@gmail.com",
     description="A simple dashboard for displaying and analysing Strava data",
-    url="https://github.com/dzhang32/stravaboard",
+    url="https://https://github.com/GraceEMc/stravaDashMaster",
     package_dir={"": "src"},
     packages=setuptools.find_packages(where="src"),
     python_requires=">=3.9",
