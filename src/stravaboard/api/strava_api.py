@@ -4,7 +4,6 @@ from datetime import datetime
 import os
 from stravaio import StravaIO
 import urllib3
-from dotenv import load_dotenv
 from dateutil.relativedelta import relativedelta
 from collections import defaultdict
 
@@ -90,12 +89,8 @@ class StravaAPI:
         activities["speed_mins_per_km"] = round(
             (activities["elapsed_min"] / activities["distance_km"]), 2
         )
-        activities["date"] = activities["start_date_local"].str.replace(
-            "T.*", "", regex=True
-        )
-        activities["date"] = pd.to_datetime(
-            activities["date"], infer_datetime_format=True
-        )
+
+        activities["date"] = pd.to_datetime(activities["start_date_local"])
 
         self.data = activities
         
