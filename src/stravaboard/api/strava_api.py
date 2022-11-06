@@ -90,7 +90,7 @@ class StravaAPI:
             (activities["elapsed_min"] / activities["distance_km"]), 2
         )
 
-        activities["date"] = pd.to_datetime(activities["start_date_local"])
+        activities["date"] =pd.to_datetime(activities["start_date_local"]).dt.tz_localize(None)
 
         self.data = activities
         
