@@ -17,7 +17,7 @@ class Stravaboard:
             refresh_token=refresh_token,
         )
 
-        self.activities = strava_api.get("activities")
+        self.activities = strava_api.get()
 
     def display(self, components: List[StravaboardComponent]) -> None:
         """Display the components of a Stravaboard.
