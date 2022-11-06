@@ -9,6 +9,7 @@ from dateutil.relativedelta import relativedelta
 from collections import defaultdict
 
 
+
 class StravaAPI:
     """Responsible for querying the Strava API."""
 
@@ -100,3 +101,15 @@ class StravaAPI:
         self.data = activities
         
         return activities
+
+
+
+load_dotenv(override=True)
+
+strava_api = StravaAPI(
+    client_id=os.environ.get("STRAVA_CLIENT_ID"),
+    client_secret=os.environ.get("STRAVA_CLIENT_SECRET"),
+    refresh_token=os.environ.get("STRAVA_REFRESH_TOKEN"),
+)
+
+activities_df = strava_api.get()

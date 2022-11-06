@@ -89,6 +89,7 @@ soupsieve==2.3.2.post1
 stack-data==0.3.0
 -e .
 streamlit==1.12.2
+stravaio==0.0.9
 tenacity==8.0.1
 terminado==0.15.0
 tinycss2==1.1.1

@@ -32,3 +32,5 @@ def test_AccessTokenManager_errors_on_bad_credentials():
             client_secret="b",
             refresh_token="c",
         )
+
+#if __name__ == "__main__":#  will be invoked if this module is being run directly, but not via import!

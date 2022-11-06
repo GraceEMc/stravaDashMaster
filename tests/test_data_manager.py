@@ -35,3 +35,9 @@ def test_ActivitiesManager_retrieves_activities_correctly(access_token):
 
     assert isinstance(am.data, pd.DataFrame)
     assert am.data.shape[0] == 50
+
+if __name__ == "__main__":
+    print(__package__)
+    print("Main")
+    TOKEN = access_token()
+    test_ActivitiesManager_retrieves_activities_correctly(TOKEN)
